@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mini Project Password Generator with different combinations from 4 characters min to 24 max!"
+    />
+    <title>password-maker</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="animate">
+        <img src="./images/icon.png" alt="locker">
+      </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <input
+        type="text"
+        id="password-output"
+        value="PASSWORD"
+        readonly
+      />
+
+      <div class="range-container">
+        <input
+          type="range"
+          id="password-length"
+          min="4"
+          max="24"
+          oninput="document.getElementById('display-password-length').value=this.value"
+        />
+        <input type="text" id="display-password-length" value="14" readonly />
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="lowercase" checked />
+        <label for="lowercase">a-z</label>
+
+        <input type="checkbox" id="uppercase" />
+        <label for="uppercase">A-Z</label>
+
+        <input type="checkbox" id="number" />
+        <label for="number">0-9</label>
+
+        <input type="checkbox" id="symbols" />
+        <label for="symbols">!-?</label>
+      </div>
+
+      <button id="generateButton">Generate password</button>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
